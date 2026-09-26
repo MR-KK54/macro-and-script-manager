@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "macro-script-manager-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-27",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+
+  // Cloudflare Hyperdrive connection pool binding to Aiven PostgreSQL
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "YOUR_HYPERDRIVE_ID"
+    }
+  ],
+
+  // Environment variables (Non-sensitive)
+  "vars": {
+    "APP_NAME": "Macro & Script Manager (Cloudflare Hyperdrive)",
+    "ENVIRONMENT": "production"
+  }
+}
